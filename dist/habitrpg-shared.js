@@ -8,7 +8,7 @@ if (typeof window !== 'undefined') {
   window._ = _;
   window.moment = moment;
 }
-},{"./script/index.coffee":6,"lodash":3,"moment":4}],2:[function(require,module,exports){
+},{"./script/index.coffee":7,"lodash":3,"moment":4}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9169,13 +9169,15 @@ process.chdir = function (dir) {
 }).call(this);
 
 },{}],5:[function(require,module,exports){
-var api, classes, diminishingReturns, events, gear, gearTypes, moment, mystery, repeat, _;
+var api, classes, diminishingReturns, events, gear, gearTypes, i18n, moment, mystery, repeat, _;
 
 _ = require('lodash');
 
 api = module.exports;
 
 moment = require('moment');
+
+i18n = require('./i18n.coffee');
 
 
 /*
@@ -9219,50 +9221,82 @@ gear = {
   weapon: {
     base: {
       0: {
-        text: "No Weapon",
-        notes: 'No Weapon.',
+        text: (function() {
+          return i18n.t('weaponBase0Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponBase0Notes');
+        }),
         value: 0
       }
     },
     warrior: {
       0: {
-        text: "Training Sword",
-        notes: 'Practice weapon. Confers no benefit.',
+        text: (function() {
+          return i18n.t('weaponWarrior0Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponWarrior0Notes');
+        }),
         value: 0
       },
       1: {
-        text: "Sword",
-        notes: 'Common soldier\'s blade. Increases STR by 3.',
+        text: (function() {
+          return i18n.t('weaponWarrior1Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponWarrior1Notes');
+        }),
         str: 3,
         value: 20
       },
       2: {
-        text: "Axe",
-        notes: 'Double-bitted battle-axe. Increases STR by 6.',
+        text: (function() {
+          return i18n.t('weaponWarrior2Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponWarrior2Notes');
+        }),
         str: 6,
         value: 30
       },
       3: {
-        text: "Morning Star",
-        notes: 'Heavy club with brutal spikes. Increases STR by 9.',
+        text: (function() {
+          return i18n.t('weaponWarrior3Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponWarrior3Notes');
+        }),
         str: 9,
         value: 45
       },
       4: {
-        text: "Sapphire Blade",
-        notes: 'Sword whose edge bites like the north wind. Increases STR by 12.',
+        text: (function() {
+          return i18n.t('weaponWarrior4Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponWarrior4Notes');
+        }),
         str: 12,
         value: 65
       },
       5: {
-        text: "Ruby Sword",
-        notes: 'Weapon whose forge-glow never fades. Increases STR by 15.',
+        text: (function() {
+          return i18n.t('weaponWarrior5Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponWarrior5Notes');
+        }),
         str: 15,
         value: 90
       },
       6: {
-        text: "Golden Sword",
-        notes: 'Bane of creatures of darkness. Increases STR by 18.',
+        text: (function() {
+          return i18n.t('weaponWarrior6Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponWarrior6Notes');
+        }),
         str: 18,
         value: 120,
         last: true
@@ -9270,44 +9304,72 @@ gear = {
     },
     rogue: {
       0: {
-        text: "Dagger",
-        notes: 'A rogue\'s most basic weapon. Confers no benefit.',
+        text: (function() {
+          return i18n.t('weaponRogue0Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponRogue0Notes');
+        }),
         str: 0,
         value: 0
       },
       1: {
-        text: "Short Sword",
-        notes: 'Light, concealable blade. Increases STR by 2.',
+        text: (function() {
+          return i18n.t('weaponRogue1Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponRogue1Notes');
+        }),
         str: 2,
         value: 20
       },
       2: {
-        text: "Scimitar",
-        notes: 'Slashing sword, swift to deliver a killing blow. Increases STR by 3.',
+        text: (function() {
+          return i18n.t('weaponRogue2Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponRogue2Notes');
+        }),
         str: 3,
         value: 35
       },
       3: {
-        text: "Kukri",
-        notes: 'Distinctive bush knife, both survival tool and weapon. Increases STR by 4.',
+        text: (function() {
+          return i18n.t('weaponRogue3Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponRogue3Notes');
+        }),
         str: 4,
         value: 50
       },
       4: {
-        text: "Nunchaku",
-        notes: 'Heavy batons whirled about on a length of chain. Increases STR by 6.',
+        text: (function() {
+          return i18n.t('weaponRogue4Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponRogue4Notes');
+        }),
         str: 6,
         value: 70
       },
       5: {
-        text: "Ninja-to",
-        notes: 'Sleek and deadly as the ninja themselves. Increases STR by 8.',
+        text: (function() {
+          return i18n.t('weaponRogue5Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponRogue5Notes');
+        }),
         str: 8,
         value: 90
       },
       6: {
-        text: "Hook Sword",
-        notes: 'Complex weapon adept at ensnaring and disarming opponents. Increases STR by 10.',
+        text: (function() {
+          return i18n.t('weaponRogue6Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponRogue6Notes');
+        }),
         str: 10,
         value: 120,
         last: true
@@ -11345,7 +11407,32 @@ api.userDefaults = {
 };
 
 
-},{"lodash":3,"moment":4}],6:[function(require,module,exports){
+},{"./i18n.coffee":6,"lodash":3,"moment":4}],6:[function(require,module,exports){
+var _;
+
+_ = require('lodash');
+
+module.exports = {
+  strings: {},
+  t: function(stringName, vars) {
+    var string;
+    string = module.exports.strings[stringName];
+    if (string) {
+      if (vars) {
+        return _.template(string, vars);
+      } else {
+        return string;
+      }
+    } else {
+      return _.template(module.exports.strings.stringNotFound, {
+        string: stringName
+      });
+    }
+  }
+};
+
+
+},{"lodash":3}],7:[function(require,module,exports){
 (function (process){
 var $w, api, content, moment, preenHistory, sanitizeOptions, _,
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -11357,6 +11444,8 @@ _ = require('lodash');
 content = require('./content.coffee');
 
 api = module.exports = {};
+
+api.i18n = require('./i18n.coffee');
 
 $w = function(s) {
   return s.split(' ');
@@ -12041,13 +12130,15 @@ api.wrap = function(user, main) {
       },
       rebirth: function(req, cb, ga) {
         var flags, gear, lvl, stats;
-        if (user.balance < 2) {
+        if (user.balance < 2 && user.stats.lvl < 100) {
           return typeof cb === "function" ? cb({
             code: 401,
             message: "Not enough gems."
           }) : void 0;
         }
-        user.balance -= 2;
+        if (user.stats.lvl < 100) {
+          user.balance -= 2;
+        }
         lvl = user.stats.lvl;
         _.each(user.tasks, function(task) {
           if (task.type !== 'reward') {
@@ -13256,5 +13347,5 @@ api.wrap = function(user, main) {
 };
 
 
-}).call(this,require("C:\\Projects\\HabitRPG\\Shared\\node_modules\\browserify\\node_modules\\insert-module-globals\\node_modules\\process\\browser.js"))
-},{"./content.coffee":5,"C:\\Projects\\HabitRPG\\Shared\\node_modules\\browserify\\node_modules\\insert-module-globals\\node_modules\\process\\browser.js":2,"lodash":3,"moment":4}]},{},[1])
+}).call(this,require("/home/matteo/Dropbox/Development/habitrpg-shared/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"))
+},{"./content.coffee":5,"./i18n.coffee":6,"/home/matteo/Dropbox/Development/habitrpg-shared/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":2,"lodash":3,"moment":4}]},{},[1])
