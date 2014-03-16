@@ -9481,9 +9481,13 @@ gear = {
     },
     special: {
       0: {
-        text: t('weaponSpecial0Text'),
-        notes: t('weaponSpecial0Notes', {
-          str: 20
+        text: (function() {
+          return i18n.t('weaponSpecial0Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecial0Notes', {
+            str: 20
+          });
         }),
         str: 20,
         value: 150,
@@ -9493,9 +9497,13 @@ gear = {
         })
       },
       1: {
-        text: t('weaponSpecial1Text'),
-        notes: t('weaponSpecial1Notes', {
-          attrs: 6
+        text: (function() {
+          return i18n.t('weaponSpecial1Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecial1Notes', {
+            attrs: 6
+          });
         }),
         str: 6,
         per: 6,
@@ -9508,9 +9516,13 @@ gear = {
         })
       },
       2: {
-        text: t('weaponSpecial2Text'),
-        notes: t('weaponSpecial2Notes', {
-          attrs: 25
+        text: (function() {
+          return i18n.t('weaponSpecial2Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecial2Notes', {
+            attrs: 25
+          });
         }),
         str: 25,
         per: 25,
@@ -9521,9 +9533,13 @@ gear = {
         })
       },
       3: {
-        text: t('weaponSpecial3Text'),
-        notes: t('weaponSpecial3Notes', {
-          attrs: 17
+        text: (function() {
+          return i18n.t('weaponSpecial3Text');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecial3Notes', {
+            attrs: 17
+          });
         }),
         str: 17,
         int: 17,
@@ -9535,9 +9551,13 @@ gear = {
         })
       },
       critical: {
-        text: t('weaponSpecialCriticalText'),
-        notes: t('weaponSpecialCriticalNotes', {
-          attrs: 40
+        text: (function() {
+          return i18n.t('weaponSpecialCriticalText');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecialCriticalNotes', {
+            attrs: 40
+          });
         }),
         str: 40,
         per: 40,
@@ -9552,9 +9572,13 @@ gear = {
         canOwn: (function(u) {
           return u.stats["class"] === 'warrior';
         }),
-        text: t('weaponSpecialYetiText'),
-        notes: t('weaponSpecialYetiNotes', {
-          str: 15
+        text: (function() {
+          return i18n.t('weaponSpecialYetiText');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecialYetiNotes', {
+            str: 15
+          });
         }),
         str: 15,
         value: 90
@@ -9564,9 +9588,13 @@ gear = {
         canOwn: (function(u) {
           return u.stats["class"] === 'rogue';
         }),
-        text: t('weaponSpecialSkiText'),
-        notes: t('weaponSpecialSkiNotes', {
-          str: 8
+        text: (function() {
+          return i18n.t('weaponSpecialSkiText');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecialSkiNotes', {
+            str: 8
+          });
         }),
         str: 8,
         value: 90
@@ -9577,10 +9605,14 @@ gear = {
           return u.stats["class"] === 'wizard';
         }),
         twoHanded: true,
-        text: t('weaponSpecialCandycaneText'),
-        notes: t('weaponSpecialCandycaneNotes', {
-          int: 15,
-          per: 7
+        text: (function() {
+          return i18n.t('weaponSpecialCandycaneText');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecialCandycaneNotes', {
+            int: 15,
+            per: 7
+          });
         }),
         int: 15,
         per: 7,
@@ -9591,9 +9623,13 @@ gear = {
         canOwn: (function(u) {
           return u.stats["class"] === 'healer';
         }),
-        text: t('weaponSpecialSnowflakeText'),
-        notes: t('weaponSpecialSnowflakeNotes', {
-          int: 9
+        text: (function() {
+          return i18n.t('weaponSpecialSnowflakeText');
+        }),
+        notes: (function() {
+          return i18n.t('weaponSpecialSnowflakeNotes', {
+            int: 9
+          });
         }),
         int: 9,
         value: 90
@@ -9816,9 +9852,13 @@ gear = {
     },
     special: {
       0: {
-        text: t('armorSpecial0Text'),
-        notes: t('armorSpecial0Notes', {
-          con: 20
+        text: (function() {
+          return i18n.t('armorSpecial0Text');
+        }),
+        notes: (function() {
+          return i18n.t('armorSpecial0Notes', {
+            con: 20
+          });
         }),
         con: 20,
         value: 150,
@@ -9828,9 +9868,13 @@ gear = {
         })
       },
       1: {
-        text: t('armorSpecial1Text'),
-        notes: t('armorSpecial1Notes', {
-          attrs: 6
+        text: (function() {
+          return i18n.t('armorSpecial1Text');
+        }),
+        notes: (function() {
+          return i18n.t('armorSpecial1Notes', {
+            attrs: 6
+          });
         }),
         con: 6,
         str: 6,
@@ -9843,9 +9887,13 @@ gear = {
         })
       },
       2: {
-        text: t('armorSpecial2Text'),
-        notes: t('armorSpecial2Notes', {
-          attrs: 25
+        text: (function() {
+          return i18n.t('armorSpecial2Text');
+        }),
+        notes: (function() {
+          return i18n.t('armorSpecial2Notes', {
+            attrs: 25
+          });
         }),
         int: 25,
         con: 25,
@@ -9857,80 +9905,76 @@ gear = {
       },
       yeti: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'warrior',
-        text: "Yeti-Tamer Robe",
-        notes: 'Limited Edition 2013 Winter Gear! Fuzzy and fierce. Increases CON by 9.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'warrior';
         }),
-        text: t('armorSpecialYetiText'),
-        notes: t('armorSpecialYetiNotes', {
-          con: 9
+        text: (function() {
+          return i18n.t('armorSpecialYetiText');
         }),
->>>>>>> chore(i18n): move armor items to content.json
+        notes: (function() {
+          return i18n.t('armorSpecialYetiNotes', {
+            con: 9
+          });
+        }),
         con: 9,
         value: 90
       },
       ski: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'rogue',
-        text: "Ski-sassin Parka",
-        notes: 'Limited Edition 2013 Winter Gear! Full of secret daggers and ski trail maps. Increases PER by 15.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'rogue';
         }),
-        text: t('armorSpecialSkiText'),
-        notes: t('armorSpecialSkiText', {
-          per: 15
+        text: (function() {
+          return i18n.t('armorSpecialSkiText');
         }),
->>>>>>> chore(i18n): move armor items to content.json
+        notes: (function() {
+          return i18n.t('armorSpecialSkiText', {
+            per: 15
+          });
+        }),
         per: 15,
         value: 90
       },
       candycane: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'wizard',
-        text: "Candy Cane Robe",
-        notes: 'Limited Edition 2013 Winter Gear! Spun from sugar and silk. Increases INT by 9.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'wizard';
         }),
-        text: t('armorSpecialCandycaneText'),
-        notes: t('armorSpecialCandycaneNotes', {
-          int: 9
+        text: (function() {
+          return i18n.t('armorSpecialCandycaneText');
         }),
->>>>>>> chore(i18n): move armor items to content.json
+        notes: (function() {
+          return i18n.t('armorSpecialCandycaneNotes', {
+            int: 9
+          });
+        }),
         int: 9,
         value: 90
       },
       snowflake: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'healer',
-        text: "Snowflake Robe",
-        notes: 'Limited Edition 2013 Winter Gear! A robe to keep you warm, even in a blizzard. Increases CON by 15.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'healer';
         }),
-        text: t('armorSpecialSnowflakeText'),
-        notes: t('armorSpecialSnowflakeNotes', {
-          con: 15
+        text: (function() {
+          return i18n.t('armorSpecialSnowflakeText');
         }),
->>>>>>> chore(i18n): move armor items to content.json
+        notes: (function() {
+          return i18n.t('armorSpecialSnowflakeNotes', {
+            con: 15
+          });
+        }),
         con: 15,
         value: 90
       },
       birthday: {
         event: events.birthday,
-        text: t('armorSpecialBirthdayText'),
-        notes: t('armorSpecialBirthdayNotes'),
+        text: (function() {
+          return i18n.t('armorSpecialBirthdayText');
+        }),
+        notes: (function() {
+          return i18n.t('armorSpecialBirthdayNotes');
+        }),
         value: 0
       },
       springRogue: {
@@ -9968,8 +10012,12 @@ gear = {
     },
     mystery: {
       201402: {
-        text: t('armorMystery201402Text'),
-        notes: t('armorMystery201402Notes'),
+        text: (function() {
+          return i18n.t('armorMystery201402Text');
+        }),
+        notes: (function() {
+          return i18n.t('armorMystery201402Notes');
+        }),
         mystery: mystery['201402'],
         value: 10
       },
@@ -10163,9 +10211,13 @@ gear = {
     },
     special: {
       0: {
-        text: t('headSpecial0Text'),
-        notes: t('headSpecial0Notes', {
-          int: 20
+        text: (function() {
+          return i18n.t('headSpecial0Text');
+        }),
+        notes: (function() {
+          return i18n.t('headSpecial0Notes', {
+            int: 20
+          });
         }),
         int: 20,
         value: 150,
@@ -10175,9 +10227,13 @@ gear = {
         })
       },
       1: {
-        text: t('headSpecial1Text'),
-        notes: t('headSpecial1Notes', {
-          attrs: 6
+        text: (function() {
+          return i18n.t('headSpecial1Text');
+        }),
+        notes: (function() {
+          return i18n.t('headSpecial1Notes', {
+            attrs: 6
+          });
         }),
         con: 6,
         str: 6,
@@ -10190,9 +10246,13 @@ gear = {
         })
       },
       2: {
-        text: t('headSpecial2Text'),
-        notes: t('headSpecial2Notes', {
-          attrs: 25
+        text: (function() {
+          return i18n.t('headSpecial2Text');
+        }),
+        notes: (function() {
+          return i18n.t('headSpecial2Notes', {
+            attrs: 25
+          });
         }),
         int: 25,
         str: 25,
@@ -10204,79 +10264,75 @@ gear = {
       },
       nye: {
         event: events.winter,
-        text: t('headSpecialNyeText'),
-        notes: t('headSpecialNyeNotes'),
+        text: (function() {
+          return i18n.t('headSpecialNyeText');
+        }),
+        notes: (function() {
+          return i18n.t('headSpecialNyeNotes');
+        }),
         value: 0
       },
       yeti: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'warrior',
-        text: "Yeti-Tamer Helm",
-        notes: 'Limited Edition 2013 Winter Gear! An adorably fearsome hat. Increases STR by 9.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'warrior';
         }),
-        text: t('headSpecialYetiText'),
-        notes: t('headSpecialYetiNotes', {
-          str: 9
+        text: (function() {
+          return i18n.t('headSpecialYetiText');
         }),
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        notes: (function() {
+          return i18n.t('headSpecialYetiNotes', {
+            str: 9
+          });
+        }),
         str: 9,
         value: 60
       },
       ski: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'rogue',
-        text: "Ski-sassin Helm",
-        notes: "Limited Edition 2013 Winter Gear! Keeps the wearer's identity secret... and their face toasty. Increases PER by 9.",
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'rogue';
         }),
-        text: t('headSpecialSkiText'),
-        notes: t('headSpecialSkiNotes', {
-          per: 9
+        text: (function() {
+          return i18n.t('headSpecialSkiText');
         }),
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        notes: (function() {
+          return i18n.t('headSpecialSkiNotes', {
+            per: 9
+          });
+        }),
         per: 9,
         value: 60
       },
       candycane: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'wizard',
-        text: "Candy Cane Hat",
-        notes: "Limited Edition 2013 Winter Gear! This is the most delicious hat in the world. It's also known to appear and disappear mysteriously. Increases PER by 7.",
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'wizard';
         }),
-        text: t('headSpecialCanycaneText'),
-        notes: t('headSpecialCanycaneNotes', {
-          per: 7
+        text: (function() {
+          return i18n.t('headSpecialCanycaneText');
         }),
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        notes: (function() {
+          return i18n.t('headSpecialCanycaneNotes', {
+            per: 7
+          });
+        }),
         per: 7,
         value: 60
       },
       snowflake: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'healer',
-        text: "Snowflake Crown",
-        notes: 'Limited Edition 2013 Winter Gear! The wearer of this crown is never cold. Increases INT by 7.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'healer';
         }),
-        text: t('headSpecialSnowflakeText'),
-        notes: t('headSpecialSnowflakeNotes', {
-          int: 7
+        text: (function() {
+          return i18n.t('headSpecialSnowflakeText');
         }),
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        notes: (function() {
+          return i18n.t('headSpecialSnowflakeNotes', {
+            int: 7
+          });
+        }),
         int: 7,
         value: 60
       },
@@ -10476,9 +10532,13 @@ gear = {
     },
     special: {
       0: {
-        text: t('shieldSpecial0Text'),
-        notes: t('shieldSpecial0Notes', {
-          per: 20
+        text: (function() {
+          return i18n.t('shieldSpecial0Text');
+        }),
+        notes: (function() {
+          return i18n.t('shieldSpecial0Notes', {
+            per: 20
+          });
         }),
         per: 20,
         value: 150,
@@ -10488,9 +10548,13 @@ gear = {
         })
       },
       1: {
-        text: t('shieldSpecial1Text'),
-        notes: t('shieldSpecial1Notes', {
-          attrs: 6
+        text: (function() {
+          return i18n.t('shieldSpecial1Text');
+        }),
+        notes: (function() {
+          return i18n.t('shieldSpecial1Notes', {
+            attrs: 6
+          });
         }),
         con: 6,
         str: 6,
@@ -10504,55 +10568,49 @@ gear = {
       },
       yeti: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'warrior',
-        text: "Yeti-Tamer Shield",
-        notes: 'Limited Edition 2013 Winter Gear! This shield reflects light from the snow. Increases CON by 7.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'warrior';
         }),
-        text: t('shieldSpecialYetiText'),
-        notes: t('shieldSpecialYetiNotes', {
-          con: 7
+        text: (function() {
+          return i18n.t('shieldSpecialYetiText');
         }),
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        notes: (function() {
+          return i18n.t('shieldSpecialYetiNotes', {
+            con: 7
+          });
+        }),
         con: 7,
         value: 70
       },
       ski: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'rogue',
-        text: "Ski-sassin Pole",
-        notes: 'Limited Edition 2013 Winter Gear! A weapon capable of destroying hordes of enemies! It also helps the user make very nice parallel turns. Increases STR by 8.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'rogue';
         }),
-        text: t('weaponSpecialSkiText'),
-        notes: t('weaponSpecialSkiNotes', {
-          str: 8
+        text: (function() {
+          return i18n.t('weaponSpecialSkiText');
         }),
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        notes: (function() {
+          return i18n.t('weaponSpecialSkiNotes', {
+            str: 8
+          });
+        }),
         str: 8,
         value: 90
       },
       snowflake: {
         event: events.winter,
-<<<<<<< HEAD
-        specialClass: 'healer',
-        text: "Snowflake Shield",
-        notes: 'Limited Edition 2013 Winter Gear! Every shield is unique. Increases CON by 9.',
-=======
         canOwn: (function(u) {
           return u.stats["class"] === 'healer';
         }),
-        text: t('shieldSpecialSnowflakeText'),
-        notes: t('shieldSpecialSnowflakeNotes', {
-          con: 9
+        text: (function() {
+          return i18n.t('shieldSpecialSnowflakeText');
         }),
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        notes: (function() {
+          return i18n.t('shieldSpecialSnowflakeNotes', {
+            con: 9
+          });
+        }),
         con: 9,
         value: 70
       },
@@ -10585,31 +10643,19 @@ gear = {
   back: {
     base: {
       0: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        text: "No Back Accessory",
-        notes: 'No Back Accessory.',
-        value: 0
-=======
         text: (function() {
           return i18n.t('backBase0Text');
         }),
         notes: (function() {
           return i18n.t('backBase0Notes');
         }),
-=======
-        text: t('backBase0Text'),
-        notes: t('backBase0Notes'),
->>>>>>> refactor(i18n): refactor & fix
-        value: 0,
-        last: true
->>>>>>> improve(i18n): move gear strings to gear.json, recompile
+        value: 0
       }
     },
     mystery: {
       201402: {
         text: t('backMystery201402Text'),
-        notes: t('headMystery201402Notes'),
+        notes: t('backMystery201402Notes'),
         mystery: mystery['201402'],
         value: 10
       }
@@ -11125,13 +11171,21 @@ _.each(api.dropEggs, function(egg, key) {
 
 api.questEggs = {
   Gryphon: {
-    text: t('questEggGryphonText'),
-    adjective: t('questEggGryphonAdjective'),
+    text: (function() {
+      return i18n.t('questEggGryphonText');
+    }),
+    adjective: (function() {
+      return i18n.t('questEggGryphonAdjective');
+    }),
     canBuy: false
   },
   Hedgehog: {
-    text: t('questEggHedgehogText'),
-    adjective: t('questEggHedgehogAdjective'),
+    text: (function() {
+      return i18n.t('questEggHedgehogText');
+    }),
+    adjective: (function() {
+      return i18n.t('questEggHedgehogAdjective');
+    }),
     canBuy: false
   },
   Deer: {
@@ -11717,7 +11771,7 @@ var _;
 _ = require('lodash');
 
 module.exports = {
-  strings: {},
+  strings: null,
   translations: {},
   t: function(stringName) {
     var locale, string, stringNotFound, vars;
@@ -11729,7 +11783,7 @@ module.exports = {
       vars = arguments[1];
       locale = arguments[2];
     }
-    string = locale ? module.exports.translations[locale][stringName] : module.exports.strings[stringName];
+    string = locale && !strings ? module.exports.translations[locale][stringName] : module.exports.strings[stringName];
     if (string) {
       if (vars) {
         return _.template(string, vars);
@@ -11737,7 +11791,7 @@ module.exports = {
         return string;
       }
     } else {
-      stringNotFound = locale ? module.exports.translations[locale].stringNotFound : module.exports.strings.stringNotFound;
+      stringNotFound = locale && !strings ? module.exports.translations[locale].stringNotFound : module.exports.strings.stringNotFound;
       return _.template(stringNotFound, {
         string: stringName
       });
@@ -11748,7 +11802,7 @@ module.exports = {
 
 },{"lodash":3}],7:[function(require,module,exports){
 (function (process){
-var $w, api, content, moment, preenHistory, sanitizeOptions, _,
+var $w, api, content, i18n, moment, preenHistory, sanitizeOptions, _,
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 moment = require('moment');
@@ -11757,9 +11811,11 @@ _ = require('lodash');
 
 content = require('./content.coffee');
 
+i18n = require('./i18n.coffee');
+
 api = module.exports = {};
 
-api.i18n = require('./i18n.coffee');
+api.i18n = i18n;
 
 $w = function(s) {
   return s.split(' ');
@@ -12394,7 +12450,9 @@ api.wrap = function(user, main) {
         }
         return typeof cb === "function" ? cb((item ? {
           code: 200,
-          message: "Your " + (item.text()) + " broke."
+          message: i18n.t('messageLostItem', {
+            itemText: item.text
+          }, req.language)
         } : null), user) : void 0;
       },
       reset: function(req, cb) {
@@ -12427,7 +12485,7 @@ api.wrap = function(user, main) {
         if (user.balance < 1) {
           return typeof cb === "function" ? cb({
             code: 401,
-            message: "Not enough gems."
+            message: i18n.t('notEnoughGems', req.language)
           }) : void 0;
         }
         user.balance--;
@@ -12447,7 +12505,7 @@ api.wrap = function(user, main) {
         if (user.balance < 2 && user.stats.lvl < 100) {
           return typeof cb === "function" ? cb({
             code: 401,
-            message: "Not enough gems."
+            message: i18n.t('notEnoughGems', req.language)
           }) : void 0;
         }
         if (user.stats.lvl < 100) {
@@ -12549,7 +12607,7 @@ api.wrap = function(user, main) {
         if (!task) {
           return typeof cb === "function" ? cb({
             code: 404,
-            message: "Task not found."
+            message: i18n.t('messageTaskNotFound', req.language)
           }) : void 0;
         }
         if (!((to != null) && (from != null))) {
@@ -12564,7 +12622,7 @@ api.wrap = function(user, main) {
         if (!(task = user.tasks[(_ref = req.params) != null ? _ref.id : void 0])) {
           return typeof cb === "function" ? cb({
             code: 404,
-            message: "Task not found"
+            message: i18n.t('messageTaskNotFound', req.language)
           }) : void 0;
         }
         _.merge(task, _.omit(req.body, ['checklist', 'id']));
@@ -12582,7 +12640,7 @@ api.wrap = function(user, main) {
         if (!task) {
           return typeof cb === "function" ? cb({
             code: 404,
-            message: 'Task not found'
+            message: i18n.t('messageTaskNotFound', req.language)
           }) : void 0;
         }
         i = user[task.type + "s"].indexOf(task);
@@ -12628,7 +12686,7 @@ api.wrap = function(user, main) {
         if (!~i) {
           return typeof cb === "function" ? cb({
             code: 404,
-            message: 'Tag not found'
+            message: i18n.t('messageTagNotFound', req.language)
           }) : void 0;
         }
         user.tags[i].name = req.body.name;
@@ -12643,7 +12701,7 @@ api.wrap = function(user, main) {
         if (!~i) {
           return typeof cb === "function" ? cb({
             code: 404,
-            message: 'Tag not found'
+            message: i18n.t('messageTagNotFound', req.language)
           }) : void 0;
         }
         tag = user.tags[i];
@@ -12666,25 +12724,25 @@ api.wrap = function(user, main) {
         if (!userPets[pet]) {
           return typeof cb === "function" ? cb({
             code: 404,
-            message: ":pet not found in user.items.pets"
+            message: i18n.t('messagePetNotFound', req.language)
           }) : void 0;
         }
         if (!((_ref2 = user.items.food) != null ? _ref2[food.key] : void 0)) {
           return typeof cb === "function" ? cb({
             code: 404,
-            message: ":food not found in user.items.food"
+            message: i18n.t('messageFoodNotFound', req.language)
           }) : void 0;
         }
         if (content.specialPets[pet]) {
           return typeof cb === "function" ? cb({
             code: 401,
-            message: "Can't feed this pet."
+            message: i18n.t('messageCannotFeedPet', req.language)
           }) : void 0;
         }
         if (user.items.mounts[pet]) {
           return typeof cb === "function" ? cb({
             code: 401,
-            message: "You already have that mount. Try feeding another pet."
+            message: i18n.t('messageAlreadyMount', req.language)
           }) : void 0;
         }
         message = '';
@@ -12694,17 +12752,25 @@ api.wrap = function(user, main) {
           if (pet === user.items.currentPet) {
             user.items.currentPet = "";
           }
-          return message = "You have tamed " + egg + ", let's go for a ride!";
+          return message = i18n.t('messageAlreadyMount', {
+            egg: egg
+          }, req.language);
         };
         if (food.key === 'Saddle') {
           evolve();
         } else {
           if (food.target === potion) {
             userPets[pet] += 5;
-            message = "" + egg + " really likes the " + (food.text()) + "!";
+            message = i18n.t('messageLikesFood', {
+              egg: egg,
+              foodText: food.text
+            }, req.language);
           } else {
             userPets[pet] += 2;
-            message = "" + egg + " eats the " + (food.text()) + " but doesn't seem to enjoy it.";
+            message = i18n.t('messageDontEnjoyFood', {
+              egg: egg,
+              foodText: food.text
+            }, req.language);
           }
           if (userPets[pet] >= 50 && !user.items.mounts[pet]) {
             evolve();
